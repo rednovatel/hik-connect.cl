@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hik-Connect.cl | Especialistas en MMOO</title>
+
+  <meta name="description"
+        content="Hik-Connect.cl, especialistas en MMOO y enlaces de microondas. Instalación, alineación, configuración, puesta en servicio, diagnóstico y optimización de radioenlaces. Parte del grupo REDNOVATEL.">
+
+  <style>
+    :root {
+      --azul: #0757a0;
+      --azul-oscuro: #062f55;
+      --azul-claro: #eaf5ff;
+      --celeste: #5db7f5;
+      --blanco: #ffffff;
+      --gris: #f5f7fa;
+      --gris-texto: #5b6875;
+      --texto: #172534;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+
+    /* =========================
+       NAV
+       ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: var(--azul-oscuro);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 15px 30px;
+
+      box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--celeste);
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background: var(--azul);
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(3, 42, 75, 0.96),
+          rgba(7, 87, 160, 0.93)
+        );
+
+      color: white;
+      text-align: center;
+
+      padding: 120px 20px;
+    }
+
+    .hero .bienvenidos {
+      font-size: 23px;
+      margin-bottom: 12px;
+      color: #b9ddfa;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 span {
+      color: var(--celeste);
+    }
+
+    .hero .especialidad {
+      font-size: 29px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 19px;
+      color: #edf7ff;
+    }
+
+    .boton {
+      display: inline-block;
+
+      margin-top: 32px;
+
+      padding: 14px 30px;
+
+      background: white;
+      color: var(--azul-oscuro);
+
+      border-radius: 8px;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .boton:hover {
+      background: #dceeff;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       GRUPO REDNOVATEL
+       ========================= */
+
+    .grupo {
+      background: var(--azul-claro);
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .grupo p {
+      color: var(--gris-texto);
+      font-size: 17px;
+    }
+
+    .grupo strong {
+      color: var(--azul);
+    }
+
+    .grupo a {
+      color: var(--azul);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* =========================
+       SECCIONES
+       ========================= */
+
+    .seccion {
+      max-width: 1150px;
+      margin: auto;
+      padding: 75px 25px;
+    }
+
+    .gris {
+      background: var(--gris);
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .titulo h2 {
+      color: var(--azul);
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .titulo p {
+      max-width: 800px;
+      margin: auto;
+      color: var(--gris-texto);
+      font-size: 18px;
+    }
+
+    /* =========================
+       SERVICIOS
+       ========================= */
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+
+      border-radius: 12px;
+
+      border-top: 4px solid var(--azul);
+
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.13);
+    }
+
+    .card h3 {
+      color: var(--azul);
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: var(--gris-texto);
+    }
+
+    /* =========================
+       MMOO
+       ========================= */
+
+    .mmoo {
+      background:
+        linear-gradient(
+          135deg,
+          #eef7ff,
+          #ffffff
+        );
+
+      border-radius: 15px;
+
+      padding: 50px 30px;
+
+      text-align: center;
+    }
+
+    .mmoo h2 {
+      color: var(--azul);
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .mmoo .sigla {
+      font-size: 25px;
+      color: var(--azul-oscuro);
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .mmoo p {
+      max-width: 850px;
+      margin: auto;
+      color: var(--gris-texto);
+      font-size: 18px;
+    }
+
+    /* =========================
+       PROCESO
+       ========================= */
+
+    .proceso {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 25px;
+    }
+
+    .paso {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .numero {
+      width: 55px;
+      height: 55px;
+
+      margin: 0 auto 15px;
+
+      background: var(--azul);
+      color: white;
+
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .paso h3 {
+      color: var(--azul-oscuro);
+      margin-bottom: 8px;
+    }
+
+    .paso p {
+      color: var(--gris-texto);
+    }
+
+    /* =========================
+       CONTACTO
+       ========================= */
+
+    .contacto {
+      background:
+        linear-gradient(
+          135deg,
+          var(--azul),
+          var(--azul-oscuro)
+        );
+
+      color: white;
+
+      text-align: center;
+
+      padding: 80px 20px;
+    }
+
+    .contacto h2 {
+      font-size: 37px;
+      margin-bottom: 15px;
+    }
+
+    .contacto p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      background: #021d34;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: var(--celeste);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .menu {
+        width: 100%;
+      }
+
+      .menu a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero .especialidad {
+        font-size: 23px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .seccion {
+        padding: 55px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       NAVEGACIÓN
+       ========================= -->
+
+  <nav>
+
+    <a href="#inicio" class="logo">
+      HIK-<span>CONNECT</span>.CL
+    </a>
+
+    <div class="menu">
+
+      <a href="#inicio">Inicio</a>
+
+      <a href="#servicios">Servicios</a>
+
+      <a href="#mmoo">MMOO</a>
+
+      <a href="#proceso">Cómo trabajamos</a>
+
+      <a href="#contacto">Contacto</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       INICIO
+       ========================= -->
+
+  <header class="hero" id="inicio">
+
+    <div class="bienvenidos">
+      Bienvenidos a
+    </div>
+
+    <h1>
+      Hik-<span>Connect.cl</span>
+    </h1>
+
+    <div class="especialidad">
+      Especialistas en MMOO
+    </div>
+
+    <p>
+      Soluciones profesionales en enlaces de microondas,
+      desde la instalación y alineación hasta la configuración,
+      puesta en servicio, diagnóstico y optimización de
+      radioenlaces.
+    </p>
+
+    <a href="#contacto" class="boton">
+      Solicitar evaluación técnica
+    </a>
+
+  </header>
+
+
+  <!-- =========================
+       GRUPO REDNOVATEL
+       ========================= -->
+
+  <section class="grupo">
+
+    <p>
+      <strong>Hik-Connect.cl</strong>
+      es una marca especializada del
+      <strong>grupo REDNOVATEL</strong>,
+      orientada exclusivamente a soluciones de
+      <strong>MMOO y enlaces de microondas</strong>.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       PRESENTACIÓN MMOO
+       ========================= -->
+
+  <section class="seccion" id="mmoo">
+
+    <div class="mmoo">
+
+      <h2>
+        Especialistas en Microondas
+      </h2>
+
+      <div class="sigla">
+        MMOO — Radioenlaces de Microondas
+      </div>
+
+      <p>
+        Diseñamos, instalamos, configuramos y ponemos en servicio
+        enlaces de microondas para conectar instalaciones,
+        sitios remotos, plantas, estaciones, edificios y
+        diferentes puntos que requieren comunicaciones
+        confiables y de alto desempeño.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SERVICIOS
+       ========================= -->
+
+  <section class="seccion gris" id="servicios">
+
+    <div class="titulo">
+
+      <h2>
+        Servicios de MMOO
+      </h2>
+
+      <p>
+        Nos especializamos en todas las etapas necesarias
+        para implementar y mantener un enlace de microondas.
+      </p>
+
+    </div>
+
+
+    <div class="servicios">
+
+
+      <div class="card">
+
+        <h3>
+          Enlaces Punto a Punto
+        </h3>
+
+        <p>
+          Implementación de enlaces de microondas punto a punto
+          para conectar dos ubicaciones mediante una solución
+          inalámbrica profesional.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Enlaces de Larga Distancia
+        </h3>
+
+        <p>
+          Soluciones de radioenlaces para comunicaciones
+          de larga distancia, considerando ubicación,
+          línea de vista y condiciones del terreno.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Instalación
+        </h3>
+
+        <p>
+          Instalación de radios, antenas, soportes,
+          cableado y elementos asociados al sistema
+          de comunicaciones.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Alineación de Antenas
+        </h3>
+
+        <p>
+          Alineación y ajuste de antenas para obtener
+          niveles adecuados de señal y un funcionamiento
+          estable del enlace.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Configuración
+        </h3>
+
+        <p>
+          Configuración de equipos y parámetros asociados
+          al enlace para dejar la solución operativa.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Diagnóstico y Optimización
+        </h3>
+
+        <p>
+          Diagnóstico de problemas de señal, capacidad
+          y estabilidad, junto con optimización técnica
+          de enlaces existentes.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Puesta en Servicio
+        </h3>
+
+        <p>
+          Pruebas y verificaciones necesarias para
+          confirmar el correcto funcionamiento del
+          radioenlace.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Mantención
+        </h3>
+
+        <p>
+          Inspección, revisión y mantenimiento técnico
+          de infraestructura de enlaces de microondas.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CÓMO TRABAJAMOS
+       ========================= -->
+
+  <section class="seccion" id="proceso">
+
+    <div class="titulo">
+
+      <h2>
+        Cómo trabajamos
+      </h2>
+
+      <p>
+        Un proceso técnico enfocado en obtener enlaces
+        estables, confiables y correctamente implementados.
+      </p>
+
+    </div>
+
+
+    <div class="proceso">
+
+
+      <div class="paso">
+
+        <div class="numero">
+          1
+        </div>
+
+        <h3>
+          Evaluación
+        </h3>
+
+        <p>
+          Analizamos la necesidad de conectividad
+          y las condiciones de los sitios.
+        </p>
+
+      </div>
+
+
+      <div class="paso">
+
+        <div class="numero">
+          2
+        </div>
+
+        <h3>
+          Planificación
+        </h3>
+
+        <p>
+          Definimos la solución y los elementos
+          necesarios para implementar el enlace.
+        </p>
+
+      </div>
+
+
+      <div class="paso">
+
+        <div class="numero">
+          3
+        </div>
+
+        <h3>
+          Instalación
+        </h3>
+
+        <p>
+          Instalamos equipos, antenas, soportes
+          y sistemas asociados.
+        </p>
+
+      </div>
+
+
+      <div class="paso">
+
+        <div class="numero">
+          4
+        </div>
+
+        <h3>
+          Alineación
+        </h3>
+
+        <p>
+          Realizamos la alineación y ajuste de
+          las antenas del radioenlace.
+        </p>
+
+      </div>
+
+
+      <div class="paso">
+
+        <div class="numero">
+          5
+        </div>
+
+        <h3>
+          Puesta en Servicio
+        </h3>
+
+        <p>
+          Ejecutamos pruebas y verificamos
+          el correcto funcionamiento del enlace.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACTO
+       ========================= -->
+
+  <section class="contacto" id="contacto">
+
+    <h2>
+      ¿Necesitas un enlace de microondas?
+    </h2>
+
+    <p>
+      Cuéntanos qué necesitas conectar y evaluaremos
+      técnicamente la solución de MMOO más adecuada
+      para tu proyecto.
+    </p>
+
+    <a
+      href="https://www.rednovatel.cl/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="boton"
+    >
+      Contactar
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <p>
+      <strong>HIK-CONNECT.CL</strong>
+    </p>
+
+    <p>
+      Especialistas en MMOO y enlaces de microondas
+    </p>
+
+    <p>
+      Una marca del grupo REDNOVATEL
+    </p>
+
+    <p>
+      © 2026 Hik-Connect.cl
+    </p>
+
+    <p>
+      <a
+        href="https://www.rednovatel.cl/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visitar REDNOVATEL
+      </a>
+    </p>
+
+  </footer>
+
+</body>
+</html>
