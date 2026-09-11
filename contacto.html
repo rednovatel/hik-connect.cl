@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | HIK-CONNECT.CL - Especialistas MMOO</title>
+  <meta name="description" content="Contacto HIK-CONNECT.CL - Especialistas en enlaces de microondas MMOO, enlaces satelitales y fibra óptica. Antofagasta, Norte Grande, Chile.">
+  <style>
+    :root {
+      --azul: #0b5cab;
+      --azul2: #083b67;
+      --celeste: #eef6ff;
+      --texto: #1c2b39;
+      --gris: #5d6b78;
+      --borde: #dbe7f2;
+      --sombra: 0 12px 35px rgba(8, 59, 103, 0.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--texto);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--azul2),var(--azul));color:white;position:sticky;top:0;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,0.15)}
+    .nav{max-width:1200px;margin:auto;min-height:78px;padding:10px 25px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:bold;white-space:nowrap}
+    .brand img{width:58px;height:58px;object-fit:contain;background:white;border-radius:50%;padding:5px}
+    nav{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+    nav a{color:white;font-weight:bold;font-size:15px;opacity:.95}
+    nav a:hover{opacity:.7}
+    .hero{background:linear-gradient(rgba(8,59,103,0.90), rgba(11,92,171,0.88)), url("img/microondas.jpg") center/cover no-repeat;color:white;padding:75px 25px;text-align:center}
+    .hero h1{font-size:42px;margin-bottom:10px}
+    .hero p{font-size:18px;opacity:.9;max-width:700px;margin:auto}
+    section{padding:70px 25px}
+    .container{max-width:1100px;margin:auto}
+    .grid-contacto{display:grid;grid-template-columns:1.1fr 0.9fr;gap:35px}
+    .card{background:white;padding:35px;border-radius:15px;border:1px solid var(--borde);box-shadow:var(--sombra)}
+    .card h2{color:var(--azul2);font-size:28px;margin-bottom:15px}
+    .card p{color:var(--gris);margin-bottom:10px}
+    label{display:block;font-weight:bold;margin-top:18px;margin-bottom:6px;color:var(--azul2)}
+    input, textarea, select{width:100%;padding:13px 14px;border:1px solid var(--borde);border-radius:8px;font-size:16px;font-family:Arial}
+    textarea{min-height:130px;resize:vertical}
+    .boton{display:inline-block;margin-top:22px;background:var(--azul);color:white;padding:13px 28px;border-radius:8px;font-weight:bold;border:none;cursor:pointer}
+    .boton:hover{background:var(--azul2)}
+    .dato{margin-bottom:22px}
+    .dato strong{display:block;color:var(--azul2);font-size:17px;margin-bottom:4px}
+    .tag{display:inline-block;background:var(--celeste);color:var(--azul);padding:6px 12px;border-radius:20px;font-weight:bold;font-size:13px;margin:4px 4px 0 0}
+    footer{background:#071f34;color:white;text-align:center;padding:35px 20px}
+    @media(max-width:850px){.grid-contacto{grid-template-columns:1fr}.nav{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="HIK-CONNECT.CL">
+      <span>HIK-CONNECT.CL</span>
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">Quiénes somos</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Contacto</h1>
+  <p>Especialistas en MMOO, enlaces satelitales y fibra óptica para minería, energía e infraestructura crítica.</p>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid-contacto">
+      
+      <div class="card">
+        <h2>Solicita tu evaluación técnica</h2>
+        <p>Cuéntanos tu requerimiento de enlace. Respondemos en menos de 24h.</p>
+        
+        <form action="mailto:contacto@hik-connect.cl" method="post" enctype="text/plain">
+          <label>Nombre / Empresa</label>
+          <input type="text" name="nombre" required placeholder="Ej: R&Q Ingeniería">
+          
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="tu@empresa.cl">
+          
+          <label>Teléfono</label>
+          <input type="tel" name="telefono" placeholder="+56 9 ...">
+          
+          <label>Tipo de servicio</label>
+          <select name="servicio">
+            <option>Enlace MMOO - Instalación nueva</option>
+            <option>Enlace MMOO - Alineación / Optimización</option>
+            <option>Enlace Satelital</option>
+            <option>Fibra Óptica</option>
+            <option>Diagnóstico / Falla SCADA / Teleprotección</option>
+            <option>Otro</option>
+          </select>
+
+          <label>Ubicación del proyecto</label>
+          <input type="text" name="ubicacion" placeholder="Ej: S/E Kimal, Antofagasta">
+
+          <label>Mensaje</label>
+          <textarea name="mensaje" placeholder="Describe distancia, capacidad, terreno, etc."></textarea>
+          
+          <button type="submit" class="boton">Enviar solicitud</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:25px">
+          <div class="dato">
+            <strong>Patricio Valenzuela - REDNOVATEL</strong>
+            Ingeniero en Redes y Comunicaciones<br>
+            Deputy Site Manager en R&Q Ingeniería
+          </div>
+          <div class="dato">
+            <strong>Dominio titular</strong>
+            hik-connect.cl - REDNOVATEL INGENIERÍA SOLUCIONES TECNOLÓGICAS LTDA.<br>
+            Vigente hasta 09/09/2027 - NIC Chile
+          </div>
+          <div class="dato">
+            <strong>Cobertura</strong>
+            Norte Grande - Antofagasta, Calama, Mejillones, Sierra Gorda
+          </div>
+          <div class="dato">
+            <strong>Especialidades</strong>
+            <span class="tag">MMOO</span>
+            <span class="tag">ENLACE SATELITAL</span>
+            <span class="tag">FIBRA ÓPTICA</span>
+            <span class="tag">MPLS</span>
+            <span class="tag">SCADA</span>
+            <span class="tag">TELEPROTECCIÓN</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 style="font-size:22px">¿Por qué HIK-CONNECT.CL?</h2>
+          <p>20+ años en terreno. No vendemos CCTV. Solo telecomunicaciones críticas donde una falla cuesta millones.</p>
+          <p style="margin-top:10px;font-size:14px;color:var(--gris)">REDNOVATEL es empresa independiente, no afiliada a Hikvision. Hik-Connect es marca registrada de Hikvision.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="font-size:22px;font-weight:bold;margin-bottom:10px">HIK-CONNECT.CL</div>
+  <p>Especialistas en MMOO · Enlaces Satelitales · Fibra Óptica</p>
+  <p>REDNOVATEL INGENIERÍA SOLUCIONES TECNOLÓGICAS LTDA.</p>
+  <p style="margin-top:18px">© 2026 hik-connect.cl · Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
