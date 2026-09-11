@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quiénes somos | Hik-Connect.cl</title>
+
+  <meta name="description"
+        content="Historia y trayectoria de Hik-Connect.cl, iniciativa especializada en enlaces de microondas MMOO, telecomunicaciones e infraestructura crítica.">
+
+  <style>
+    :root {
+      --azul: #0b5cab;
+      --azul2: #083b67;
+      --celeste: #eef6ff;
+      --blanco: #ffffff;
+      --texto: #1c2b39;
+      --gris: #5d6b78;
+      --borde: #dbe7f2;
+      --sombra: 0 12px 35px rgba(8, 59, 103, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul2), var(--azul));
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 78px;
+      padding: 10px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 22px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      opacity: 0.95;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(8,59,103,0.90), rgba(11,92,171,0.88)),
+        url("img/microondas.jpg") center/cover no-repeat;
+      color: white;
+      padding: 95px 25px;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero span {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.30);
+      padding: 7px 15px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.08;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    section {
+      padding: 80px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .intro h2,
+    .section-title h2 {
+      color: var(--azul2);
+      font-size: 36px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .intro p {
+      color: var(--gris);
+      font-size: 18px;
+    }
+
+    .historia {
+      background: var(--celeste);
+    }
+
+    .historia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .historia-text h2 {
+      color: var(--azul2);
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
+    .historia-text p {
+      margin-bottom: 18px;
+      color: var(--gris);
+      font-size: 17px;
+    }
+
+    .destacado {
+      background: white;
+      border-left: 5px solid var(--azul);
+      padding: 25px;
+      margin-top: 25px;
+      border-radius: 8px;
+      box-shadow: var(--sombra);
+    }
+
+    .destacado strong {
+      display: block;
+      color: var(--azul2);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .padre {
+      background: white;
+      border-radius: 15px;
+      padding: 38px;
+      box-shadow: var(--sombra);
+      border: 1px solid var(--borde);
+    }
+
+    .padre h3 {
+      color: var(--azul);
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .padre p {
+      color: var(--gris);
+      font-size: 17px;
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--celeste);
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--azul2);
+    }
+
+    .trayectoria {
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .section-title p {
+      color: var(--gris);
+      font-size: 17px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--azul);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 65px;
+      margin-bottom: 42px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: var(--azul);
+      border: 5px solid white;
+      box-shadow: 0 0 0 2px var(--azul);
+    }
+
+    .timeline-item h3 {
+      color: var(--azul2);
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item .empresa {
+      color: var(--azul);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--gris);
+    }
+
+    .especialidad {
+      background: var(--celeste);
+    }
+
+    .especialidad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--borde);
+      box-shadow: var(--sombra);
+    }
+
+    .card h3 {
+      color: var(--azul2);
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: var(--gris);
+    }
+
+    .hoy {
+      background: linear-gradient(135deg, var(--azul2), var(--azul));
+      color: white;
+    }
+
+    .hoy-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hoy h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .hoy p {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-bottom: 18px;
+    }
+
+    .cargo {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 22px;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .hik {
+      background: white;
+    }
+
+    .hik-box {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hik-box h2 {
+      color: var(--azul2);
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hik-box p {
+      color: var(--gris);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .mmoodestacado {
+      margin-top: 35px;
+      background: var(--celeste);
+      border-radius: 15px;
+      padding: 35px;
+      border: 1px solid var(--borde);
+    }
+
+    .mmoodestacado h3 {
+      color: var(--azul);
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 25px;
+      background: var(--azul);
+      color: white;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .boton:hover {
+      background: var(--azul2);
+    }
+
+    footer {
+      background: #071f34;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      opacity: 0.85;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 850px) {
+
+      .nav {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .historia-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .especialidad-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 20px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .timeline::before {
+        left: 14px;
+      }
+
+      .timeline-dot {
+        left: 2px;
+      }
+
+      .timeline-item {
+        padding-left: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Hik-Connect.cl">
+      <span>Hik-Connect.cl</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">Quiénes somos</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <span>HISTORIA · EXPERIENCIA · TELECOMUNICACIONES</span>
+
+    <h1>
+      La historia detrás de Hik-Connect.cl
+    </h1>
+
+    <p>
+      Una historia construida durante más de 20 años en el mundo de las
+      telecomunicaciones, las redes y las infraestructuras críticas.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="container">
+
+    <div class="intro">
+
+      <h2>
+        Las telecomunicaciones no llegaron por casualidad
+      </h2>
+
+      <p>
+        Mi nombre es <strong>Patricio Valenzuela</strong>. Soy Ingeniero en
+        Redes y Comunicaciones y Técnico de Nivel Superior en
+        Telecomunicaciones. Llevo más de 20 años ligado a las
+        telecomunicaciones, trabajando en terreno, en proyectos de minería,
+        energía, transmisión eléctrica y redes industriales.
+      </p>
+
+      <p style="margin-top:20px;">
+        Hik-Connect.cl nace desde esa experiencia y desde una especialidad
+        que conozco directamente: los <strong>enlaces de microondas
+        (MMOO)</strong>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="historia">
+
+  <div class="container">
+
+    <div class="historia-grid">
+
+      <div class="historia-text">
+
+        <h2>
+          Una vocación que comenzó en casa
+        </h2>
+
+        <p>
+          Mi relación con las telecomunicaciones comenzó mucho antes de
+          ingresar formalmente a esta profesión.
+        </p>
+
+        <p>
+          Soy hijo de <strong>Jorge Valenzuela</strong>, un profesional con
+          una extensa trayectoria en telecomunicaciones y una vida dedicada
+          a esta industria.
+        </p>
+
+        <p>
+          Mi padre desarrolló una trayectoria de aproximadamente
+          <strong>50 años</strong> vinculada a las telecomunicaciones,
+          incluyendo <strong>25 años en la Armada y 25 años en Ericsson</strong>.
+        </p>
+
+        <p>
+          Crecer cerca de ese mundo me permitió conocer desde temprano la
+          importancia que tienen las comunicaciones, la disciplina técnica,
+          el trabajo en terreno y la responsabilidad que existe detrás de
+          cada sistema de comunicación.
+        </p>
+
+        <div class="destacado">
+
+          <strong>
+            Jorge Valenzuela
+          </strong>
+
+          Una trayectoria que marcó una generación de profesionales y que
+          también fue una de las grandes influencias en mi propia vocación
+          por las telecomunicaciones.
+
+        </div>
+
+      </div>
+
+
+      <div class="padre">
+
+        <h3>
+          El origen de una pasión
+        </h3>
+
+        <p>
+          Las telecomunicaciones siempre fueron parte de mi entorno.
+          Con el tiempo, esa influencia familiar se transformó en una
+          profesión propia, construida con estudio, experiencia y muchos
+          años de trabajo en terreno.
+        </p>
+
+        <p style="margin-top:18px;">
+          No se trata solamente de instalar equipos. Se trata de entender
+          cómo funciona una red, cómo mantenerla disponible y cómo responder
+          cuando las comunicaciones son críticas para una operación.
+        </p>
+
+        <div class="quote">
+          “Las telecomunicaciones fueron parte de mi familia; el terreno
+          las convirtió en mi profesión.”
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="trayectoria">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Mi trayectoria profesional
+      </h2>
+
+      <p>
+        Más de dos décadas trabajando con redes, telecomunicaciones,
+        infraestructura crítica y sistemas de comunicación industrial.
+      </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          Telecomunicaciones y terreno
+        </h3>
+
+        <div class="empresa">
+          Más de 20 años de experiencia
+        </div>
+
+        <p>
+          Desarrollo profesional en instalación, configuración,
+          mantenimiento, diagnóstico y puesta en servicio de sistemas de
+          telecomunicaciones para ambientes industriales y críticos.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          TIVIT LATAM
+        </h3>
+
+        <div class="empresa">
+          Analista de Telecomunicaciones
+        </div>
+
+        <p>
+          Implementación de redes MMOO para Enel y CMPC, implementación de
+          redes MPLS para Enel, atención de fallas de Teleprotección y SCADA
+          en subestaciones eléctricas y participación en la puesta en servicio
+          de instalaciones como S/E Frutillar Norte, S/E Tineo, S/E Frontera
+          y S/E Kimal.
+        </p>
+
+        <p style="margin-top:12px;">
+          También participé en mantenimiento preventivo y correctivo de
+          sistemas de onda portadora y en la coordinación zonal de
+          telecomunicaciones para contratos asociados a Transelec y Enel
+          en el Norte Grande.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          DRS Ingeniería y Gestión
+        </h3>
+
+        <div class="empresa">
+          ITO de Telecomunicaciones · Transelec
+        </div>
+
+        <p>
+          Participación en la implementación de nuevas redes de
+          telecomunicaciones asociadas a sistemas de seguridad STS en
+          subestaciones eléctricas.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          Fundación de Educación Nocedal
+        </h3>
+
+        <div class="empresa">
+          Profesor de Telecomunicaciones
+        </div>
+
+        <p>
+          Una etapa distinta dentro de mi trayectoria, dedicada a enseñar
+          telecomunicaciones, desarrollar material didáctico y transmitir
+          conocimientos técnicos a nuevas generaciones.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          Optytek · BHP
+        </h3>
+
+        <div class="empresa">
+          Especialista Nivel 2 - Networking
+        </div>
+
+        <p>
+          Gestión avanzada de redes MPLS en faenas mineras MEL y Spence,
+          administración y configuración de routers Nokia 7705 y Cisco,
+          diagnóstico y resolución de incidencias complejas de Nivel 2 y
+          soporte avanzado para servicios críticos de operación minera.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <h3>
+          R&amp;Q Ingeniería
+        </h3>
+
+        <div class="empresa">
+          Deputy Site Manager · Actualidad
+        </div>
+
+        <p>
+          Actualmente me desempeño como Deputy Site Manager en
+          <strong>R&amp;Q Ingeniería</strong>, participando en proyectos de
+          ingeniería y operación en la Región de Antofagasta.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="especialidad">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Una experiencia que abarca distintas tecnologías
+      </h2>
+
+      <p>
+        La experiencia adquirida durante estos años me ha permitido trabajar
+        con diferentes tecnologías y sistemas de comunicación.
+      </p>
+
+    </div>
+
+
+    <div class="especialidad-grid">
+
+      <div class="card">
+
+        <h3>
+          MMOO
+        </h3>
+
+        <p>
+          Radioenlaces de microondas, instalación, alineación, configuración,
+          puesta en servicio, diagnóstico y optimización.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Redes MPLS
+        </h3>
+
+        <p>
+          Implementación, operación, administración y resolución de
+          incidencias en redes de comunicaciones críticas.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Fibra óptica
+        </h3>
+
+        <p>
+          Infraestructura de fibra óptica y conectividad para redes
+          industriales y sistemas de telecomunicaciones.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          LTE / 4G
+        </h3>
+
+        <p>
+          Soluciones de conectividad inalámbrica para ambientes industriales
+          y operaciones donde la disponibilidad es fundamental.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          SCADA
+        </h3>
+
+        <p>
+          Experiencia asociada a sistemas de comunicación para supervisión,
+          control y operación de infraestructura eléctrica.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Teleprotección
+        </h3>
+
+        <p>
+          Atención de sistemas de comunicación asociados a protección y
+          transmisión eléctrica.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="hoy">
+
+  <div class="container">
+
+    <div class="hoy-content">
+
+      <h2>
+        Hoy sigo en terreno
+      </h2>
+
+      <p>
+        Actualmente desarrollo mi carrera profesional como
+        <strong>Deputy Site Manager en R&amp;Q Ingeniería</strong>,
+        participando en proyectos de ingeniería en la Región de Antofagasta.
+      </p>
+
+      <p>
+        Esta experiencia continúa alimentando una forma de trabajar basada
+        en planificación, seguridad, coordinación, continuidad operacional
+        y conocimiento técnico.
+      </p>
+
+      <div class="cargo">
+        Deputy Site Manager · R&amp;Q Ingeniería
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="hik">
+
+  <div class="container">
+
+    <div class="hik-box">
+
+      <h2>
+        ¿Por qué Hik-Connect.cl?
+      </h2>
+
+      <p>
+        Hik-Connect.cl nace como una iniciativa especializada en una
+        tecnología que ha estado presente durante buena parte de mi
+        trayectoria profesional:
+        <strong>los enlaces de microondas.</strong>
+      </p>
+
+      <p>
+        La idea es simple: concentrar experiencia, conocimiento y trabajo
+        de terreno en una especialidad concreta, entregando soluciones
+        profesionales para instalación, alineación, configuración,
+        puesta en servicio, diagnóstico y optimización de enlaces MMOO.
+      </p>
+
+
+      <div class="mmoodestacado">
+
+        <h3>
+          Especialistas en MMOO
+        </h3>
+
+        <p>
+          No buscamos ser una plataforma que haga de todo.
+          Hik-Connect.cl está enfocada específicamente en
+          <strong>radioenlaces de microondas</strong> y en las necesidades
+          técnicas que existen alrededor de ellos.
+        </p>
+
+        <p style="margin-top:15px;">
+          Esa especialización nace de años de experiencia real en
+          telecomunicaciones, minería, energía, transmisión eléctrica y
+          ambientes industriales.
+        </p>
+
+        <a href="index.html#servicios" class="boton">
+          Ver servicios MMOO
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="footer-brand">
+    Hik-Connect.cl
+  </div>
+
+  <p>
+    Especialistas en enlaces de microondas · MMOO
+  </p>
+
+  <p>
+    Telecomunicaciones · Conectividad · Infraestructura crítica
+  </p>
+
+  <p style="margin-top:18px;">
+    © 2026 Hik-Connect.cl · Todos los derechos reservados
+  </p>
+
+</footer>
+
+
+</body>
+</html>
